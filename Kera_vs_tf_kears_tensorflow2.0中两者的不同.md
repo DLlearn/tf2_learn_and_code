@@ -1,0 +1,44 @@
+# 加图
+![pic](https://www.pyimagesearch.com/wp-content/uploads/2019/10/keras_vs_tfdotkeras_header.png)
+
+本文将讲`keras`和`tf.keras`的不同。我认为这很有必要：
+- 在tensorflow2.0之前，就存在keras,现在又来了一个tf.keras，这有什么不同呢？
+- 学了好久的keras,现在是tenorflow2.0+tf.keras,要不要学呢？如果学该从那里入手？
+tensorflow2.0在2019年9月30日发布，万众瞩目，但让从事深度学习的人有点挠头：
+- 我是keras的用户，tf2的发布对我意味着什么？
+- 我应该继续使用keras来训练我的模型呢还是使用tf.keras来做我的模型？
+- 作为keras的用户，tensorflow2.0的特性我有必要关注吗?
+麻烦！！！！
+
+从tensorflow1.x到tensorflow2.0还是很艰难的，至少刚开始是这样的，所在正确的理解，有助于快速过渡。
+下文将讨论这些内容。
+
+## 加图 keras和tensorflow之间的关系
+![ipc](https://www.pyimagesearch.com/wp-content/uploads/2019/10/keras_vs_tfdotkeras_relationship.png)
+
+理解tensorflow和keras之间的关系：
+- keras是由谷歌的工程师[Francois Chollet](https://fchollet.com/)创建的
+- Francois在2015年3月27号在github上提交并发布
+- 最初，Francois开发keras是为了提高和帮助自己的研究和实验
+- 随着深度学习的流行，越来越多的开发人员，程序员等由于keras便捷的api和易用性更加关注keras
+- 另外一点就是当是深度学习平台很少，比较出名的只有caffe,torch,theano.这些库有一些问题，或者是用c++代码来写，耗时费力，效率低下。反过来keras却很好用，很快能实现实验。
+- 要完成自己的实验，keras需要一个后端来作为计算engine,提供模型定义、优化，keras高度抽像，支持不同的后端，但可以实现同样的深度学习功能，使用非常便捷
+- 在版本1.1.0之前，keras的默认后端是theano,同时google的tensorflow开始发布并逐渐火起来，keras开始用tensorflow，并且在1.1.0之后，开始用tensorflow作为后端。
+- keras和tensorflow开始同步发展，用户都逐步增加。使用keras不能没有tensorflow,你安装keras会把tensorflow作为一个依赖项来安装上。随着tensorflow用户的增加，越来越多的人也开始关注keras的简单易用。
+- tensorflow 从1.10版本开始，把keras的功能集成到tensorflow中，叫`tf.keras`.此时，tensorflow和keras还各自独立发展，keras与tf.keras没有关联
+- 2019年6月谷歌宣布开发tensorflow2.0，并将把keras作为官方的tensorflow的高级api，用于快速，易用的实现模型训练。
+- keras2.3.0发布后，Francois宣布：这是第一个与tf.keras同步的keras版本；它将是最后一版支持多种后端的版本（theano,cntk...);所有的深度学习人员要把代码从keras转到tensorflow2.0和tf.keras上;keras任将接收bug修复，但推荐使用tf.keras
+
+可以看到tensorflow和keras的关系复杂，漫长。
+
+更重要的是，对于keras的用户，未来的项目要转到tensorflow2.0和tf.keras上。
+
+### 未来所有的项目都要使用tf.keras
+
+# 加图
+![sdf](https://www.pyimagesearch.com/wp-content/uploads/2019/10/keras_vs_tfdotkeras_together.png)
+
+
+```python
+
+```
