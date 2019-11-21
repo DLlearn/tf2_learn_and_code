@@ -28,7 +28,7 @@ args=vars(parser.parse_args())
 #initialize parameters
 init_lr =1e-2
 batch_size=128
-num_epochs=60
+num_epochs=50
 #初始化cifar10的标签名
 labelnames=["airplane","automobile","bird","cat","deer","dog","frog","horse","ship","truck"]
 #load cifar10数据
@@ -56,10 +56,11 @@ elif args["model"] == "functional":
     model = minigooglenet_functional(32, 32, 3, len(labelnames))
  
  # check to see if we are using a Keras Model class
-elif args["model"] == "class":
+elif args["model"] == "subclass":
     # instantiate a Keras Model sub-class model
     print(" using model sub-classing...")
     model = MiniVGGNetModel(len(labelnames))
+    print('ok')
     
 #编译模型
 opt = SGD(lr=init_lr,momentum=0.9,decay=init_lr/num_epochs)
@@ -89,5 +90,8 @@ plt.plot(N,H.history["loss"],label="train_loss")
 plt.plot(N,H.history["val_loss"],label="val_loss")
 plt.plot(N,H.history["accuracy"],label="train_acc")
 plt.plot(N,H.history["val_accuracy"],label="val_acc")
+plt.xlabel("Epoch #")
+plt.ylabel("Loss/Accuracy")
 plt.title(title)
+plt.legend()
 plt.savefig(args["plot"])

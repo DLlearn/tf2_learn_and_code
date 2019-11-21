@@ -76,7 +76,7 @@ def minigooglenet_functional(width,height,depth,classes):
     model = Model(inputs,x,name='MiniGoogLeNet')
     return model
 
-def MiniVGGNetModel(Model):
+class MiniVGGNetModel(Model):
     def __init__(self,classes,chandim=-1):
         super().__init__()
         #(conv+relu)*2+pool
@@ -112,7 +112,7 @@ def MiniVGGNetModel(Model):
         x = self.conv1b(x)
         x = self.act1b(x)
         x = self.bn1b(x)
-        x = self.poo1(x)
+        x = self.pool1(x)
         #bulid 2
         x = self.conv2a(x)
         x = self.act2a(x)
