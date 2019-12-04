@@ -1,0 +1,12 @@
+python train_ecg.py \
+ --output_folder=/raid/data1/out/tf2/output_model2 \
+ --train_data_path=/deeplearn_data2/experimental_data/191122/train_datas \
+ --validation_data_path=/deeplearn_data2/experimental_data/191122/test_datas \
+ --save_format=hdf5 \
+ --which_gpu=0 \
+ --batch_size=256 \
+ --epochs=60 \
+ --regularizer=5e-4 \
+ --lr_decay_epochs=5 \
+ --num_classes=12 \
+ --initial_learning_rate=1e-3
