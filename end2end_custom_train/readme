@@ -1,0 +1,9 @@
+2019年12月5日
+我们有I,II,V1,V5，II,V5所有无干扰的训练数测试数据
+/deeplearn_data2/experimental_data/191126/，这个数据可以做为一个小的baseline
+现在训练I，II,V1,V5导联数据模型：
+模型在/raid/data1/out/model_I_250hz_4s_20191205,其它模型改名称就可以，都保存在158上，格式是hdf5.
+
+
+
+

@@ -1,0 +1,11 @@
+
+数据notpureN,40个小格对40个小格
+--output_folder=/raid/data1/out/model_seg40_II_250hz_4s_20191216 \
+--train_data_path=/deeplearn_data2/experimental_data/191210/Channel_II/NotContainNoise/NonPureN/Train \
+--validation_data_path=/deeplearn_data2/experimental_data/191210/Channel_II/NotContainNoise/NonPureN/Test \
+模型1：
+/raid/data1/out/model_seg40_II_250hz_4s_20191216 adam batchsize=100 lr=1e-3 无正则，无label smooth
+/raid/data1/out/model_seg40_II_250hz_4s_20191216_sgd sgd batchsize=100 lr=1e-3 无正则，无label smooth
+
+
+
